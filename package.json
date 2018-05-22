@@ -2,12 +2,11 @@
   "name": "almundo-test",
   "version": "1.0.0",
   "description": "Almundo Frontend Test",
-  "main": "index.js",
   "author": "Federico Martin Pazos",
   "license": "MIT",
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon index.js",
+    "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
