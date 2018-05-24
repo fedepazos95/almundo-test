@@ -48,3 +48,29 @@
   padding-top: 10px;
   padding-bottom: 5px;
 }
+.price-box {
+  text-align: center;
+  border-left: dashed 2px #cccccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.price-box p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.price {
+  color: #df6800;
+  font-size: 20px;
+}
+.price span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.col-centered{
+  float: none;
+  margin: 0 auto;
+  }
