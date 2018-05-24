@@ -7,14 +7,14 @@ const FiltersBox = ({ state, handleFilterChange, handleNameChange, submitName })
         <div className="shadow-sm" id="filtersBox">
             <div className="title">Filtros</div>
             <div className="box">
-                <Icon name="search" size="18" /><label data-toggle="collapse" href="#collapseNombre" role="button"> Nombre del hotel</label>
+                <Icon name="search" size="18" /><label data-toggle="collapse" href="#collapseNombre" role="button"> Nombre del hotel <Icon name="chevron-down" size="12" /></label>
                 <form className="collapse show mt-2 ml-2 form-inline" id="collapseNombre" onSubmit={submitName}>
                     <input name="name" type="text" className="form-control" placeholder="Ingrese el nombre del hotel" onChange={handleNameChange} value={state.name} />
                     <button type="submit" className="btn btn-primary ml-2">Aceptar</button>
                 </form>
             </div>
             <div className="box">
-                <Icon name="star" size="18" /><label data-toggle="collapse" href="#collapseEstrellas" role="button"> Estrellas</label>
+                <Icon name="star" size="18" /><label data-toggle="collapse" href="#collapseEstrellas" role="button"> Estrellas <Icon name="chevron-down" size="12" /></label>
                 <div className="collapse" id="collapseEstrellas">
                     <div className="col-lg-12 col-sm-12">
                         <Checkbox name="stars" id="all" handleChange={handleFilterChange} checked={(state.stars === "all")} content="Todas las estrellas" />
