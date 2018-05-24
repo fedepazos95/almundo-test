@@ -54,12 +54,12 @@ class Hotels extends Component {
                     <FiltersBox state={this.state} handleFilterChange={this.handleFilterChange} />
                 </div>
                 <div className='col-lg-9 col-sm-9'>
-                    {!hotels &&
-                        <img src={loading} alt="loading" className="loading" width={(isMobile) ? '15%' : '3%'}/>
+                    {hotels.length === 0 &&
+                        <img src={loading} alt="loading" className="loading" width={(isMobile) ? '15%' : '3%'} />
                     }
-                    {hotels &&
+                    {hotels.length > 0 &&
                         hotels.map((hotel, key) => {
-                            return <HotelBlock key={key} hotel={hotel} isMobile={isMobile}/>;
+                            return <HotelBlock key={key} hotel={hotel} isMobile={isMobile} />;
                         })
                     }
                 </div>
@@ -69,7 +69,7 @@ class Hotels extends Component {
 }
 
 const mapStateToProps = state => {
-    return { hotels: null }
+    return { hotels: state.hotels }
 }
 
 export default connect(mapStateToProps, actions)(Hotels);
