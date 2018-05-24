@@ -4,20 +4,33 @@ import * as actions from '../actions';
 
 // Components
 import HotelBlock from '../components/HotelBlock';
-import FiltersBox from './FiltersBox';
+import FiltersBox from '../components/FiltersBox';
 
 class Hotels extends Component {
     constructor(props) {
         super(props);
         this.state = {
             name: "",
-            stars: "all"
-        }
+            stars: "all",
+            width: window.innerWidth
+        };
         this.handleFilterChange = this.handleFilterChange.bind(this);
+    }
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
     }
 
     componentDidMount() {
         this.props.fetchHotels();
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
     }
 
     handleFilterChange(e) {
@@ -29,8 +42,8 @@ class Hotels extends Component {
     }
 
     render() {
-        console.log(this.state);
         const { hotels } = this.props;
+        const isMobile = this.state.width <= 500;
         if (hotels === null) {
             return <p>Cargando...</p>;
         }
@@ -43,7 +56,7 @@ class Hotels extends Component {
                 <div className='col-lg-9 col-sm-9'>
                     {
                         hotels.map((hotel, key) => {
-                            return <HotelBlock key={key} hotel={hotel} />;
+                            return <HotelBlock key={key} hotel={hotel} isMobile={isMobile}/>;
                         })
                     }
                 </div>

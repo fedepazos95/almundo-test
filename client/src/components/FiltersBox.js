@@ -3,7 +3,6 @@ import Icon from '../components/Icon';
 import Checkbox from '../components/Checkbox';
 
 const FiltersBox = ({state, handleFilterChange}) => {
-
         return (
             <div className="shadow-sm">
                 <div className="filters-title">
