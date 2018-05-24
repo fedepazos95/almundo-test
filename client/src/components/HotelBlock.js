@@ -24,8 +24,8 @@ const HotelBlock = (props) => {
                         }
                     </div>
                 </div>
-                <div className="col-3 align-self-center">
-                    <div className="text-center ml-5 mr-5">
+                <div className="col-lg-3 col-sm-3 align-self-center">
+                    <div className="text-center mr-5 ml-5">
                         <span>Precio por noche por habitación</span>
                         <h3 className="price">ARS {props.hotel.price}</h3>
                         <button className="btn-lg btn-primary btn-block">Ver hotel</button>
