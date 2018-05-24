@@ -47,7 +47,7 @@ module.exports = app => {
         })), (err => {
             if (err) console.log('Error', err);
         }));
-        res.send({message: "Hotel updated successfully!"});
+        res.send({ message: "Hotel updated successfully!" });
     });
 
     // Delete a Hotel with id
@@ -55,6 +55,6 @@ module.exports = app => {
         fs.writeFile('data/hotels.json', JSON.stringify(data.filter(hotel => hotel.id !== req.params.id)), (err) => {
             if (err) console.log('Error', err);
         });
-        res.send({message: "Hotel deleted successfully!"});
+        res.send({ message: "Hotel deleted successfully!" });
     });
 }

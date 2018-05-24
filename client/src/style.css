@@ -5,57 +5,50 @@
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: solid 4px #33618c;
-}
-.blue1 {
   background-color: #0c3e7d;
 }
-.blue2 {
-  color: #258ec8;
-}
-.filters-box {
-  background-color: white;
-  border: solid 1px #efefef;
-  padding: 10px;
-}
-.filters-title {
+#filtersBox .title {
   background-color: white;
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
   border: solid 1px #efefef;
 }
-.filter {
+#filtersBox label {
+  color: #258ec8;
+}
+#filtersBox .box {
   background-color: white;
   padding: 10px;
   border: solid 1px #efefef;
   font-weight: bold;
 }
-.hotel-block {
+#hotelBox {
   background-color: white;
   border: solid 1px #efefef;
   margin-bottom: 20px;
   padding: 15px;
 }
-.hotel-img {
+#hotelBox .hotel-img {
   width: 100%;
   height: 230px;
 }
-.hotel-title {
+#hotelBox h5 {
   color: #258ec8;
   font-weight: bold;
-  font-size: 20px;
+  margin-bottom: -0px;
 }
-.desc-box-desktop {
+#hotelBox h3 {
+  color: #df6800;
+  font-weight: bold;
+}
+#hotelBox .desc-desktop {
   border-right: dashed 2px #cccccc;
 }
-.desc-box-mobile {
+#hotelBox .desc-mobile {
   border-bottom: dashed 2px #cccccc;
   padding-left: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-}
-.price {
-  color: #df6800;
-  font-weight: bold;
 }
