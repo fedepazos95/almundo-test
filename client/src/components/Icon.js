@@ -7,7 +7,7 @@ const Icon = ({ name, size, repeat }) => {
     }
     return (
         Array.apply(null, { length: repeat }).map((e, i) => (
-            <img key={i} src={svgIcon} height={size} width={size} alt={name} style={{ "margin-bottom": "5px", "margin-right": "5px" }} />
+            <img key={i} src={svgIcon} height={size} width={size} alt={name} style={{ "marginBottom": "5px", "marginRight": "5px" }} />
         ))
     );
 }

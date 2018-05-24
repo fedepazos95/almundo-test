@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 // Components
 import Header from './Header';
-import Hotels from './Hotels';
+import Hotels from '../containers/Hotels';
 
 class App extends Component {
   render() {
@@ -11,8 +11,8 @@ class App extends Component {
       <div>
         <Header />
         <BrowserRouter>
-          <div id='body'>
-            <Route exact path='/' component={Hotels} />
+          <div id="body">
+            <Route exact path="/" component={Hotels} />
           </div>
         </BrowserRouter>
       </div>

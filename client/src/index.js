@@ -14,7 +14,7 @@ import 'bootstrap';
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './components/css/index.css';
+import './style.css';
 import 'components-font-awesome/css/fontawesome-all.min.css';
 
 // Components

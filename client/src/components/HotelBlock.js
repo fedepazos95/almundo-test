@@ -11,8 +11,8 @@ const HotelBlock = (props) => {
                 <div className="col-lg-3 col-sm-3">
                     <img src={image} className="hotel-img" alt="hotel-img" />
                 </div>
-                <div className="col-lg-6 col-sm-6">
-                    <div className="row hotel-title">{props.hotel.name}</div>
+                <div className="col-sm-6">
+                    <span className="row hotel-title">{props.hotel.name}</span>
                     <div className="row">
                         <Icon name="star" size="20" repeat={props.hotel.stars} />
                     </div>
@@ -26,12 +26,12 @@ const HotelBlock = (props) => {
                         }
                     </div>
                 </div>
-                <div className="col-lg-3 col-sm-3 price-box">
+                <div className="col-sm-3 price-box">
                     <p>
-                        <div>Precio por noche por habitación</div>
-                        <div className="price">
+                        <span>Precio por noche por habitación</span>
+                        <label className="price">
                             <label>ARS</label> <span>{props.hotel.price}</span>
-                        </div>
+                        </label>
                         <button className="btn-lg btn-primary btn-block">Ver hotel</button>
                     </p>
                 </div>
