@@ -17,13 +17,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css';
 import 'components-font-awesome/css/fontawesome-all.min.css';
 
+
 // Components
 import App from './components/App';
 
 const store = createStore(reducers, composeWithDevTools(
     applyMiddleware(reduxThunk),
 ));
-
+document.body.style = 'background: #f4f4f4;';
 ReactDOM.render(
     <Provider store={store}>
         <App />
