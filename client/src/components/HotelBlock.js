@@ -11,7 +11,7 @@ const HotelBlock = ({ hotel, isMobile }) => {
                     <img src={image} className="hotel-img" alt="hotel-img" />
                 </div>
                 <div className={`col-lg-6 col-sm-6 desc-${(isMobile) ? 'mobile' : 'desktop'}`}>
-                    <h5>{hotel.name}</h5>
+                    <h5 className={`${(isMobile) ? 'mt-4' : ''}`}>{hotel.name}</h5>
                     <div><Icon name="star" size="20" repeat={hotel.stars} /></div>
                     <div className={`${(isMobile) ? 'mb-4' : ''}`}>
                         {
