@@ -14,6 +14,8 @@ This is a test app for Almundo Frontend Test
 ## Built With
 
 * [Create React App](https://github.com/facebook/create-react-app)
+* [Redux](https://redux.js.org/)
+* [ExpressJS](http://expressjs.com/)
 
 ## Authors
 
