@@ -52,3 +52,20 @@
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+/* Misc */
+.loading {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: loading-spin infinite 2s linear;
+}
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+// Assets 
+import loading from '../assets/images/loading.png';
+
 // Components
 import HotelBlock from '../components/HotelBlock';
 import FiltersBox from '../components/FiltersBox';
@@ -44,9 +47,6 @@ class Hotels extends Component {
     render() {
         const { hotels } = this.props;
         const isMobile = this.state.width <= 500;
-        if (hotels === null) {
-            return <p>Cargando...</p>;
-        }
 
         return (
             <div className='row'>
@@ -54,7 +54,10 @@ class Hotels extends Component {
                     <FiltersBox state={this.state} handleFilterChange={this.handleFilterChange} />
                 </div>
                 <div className='col-lg-9 col-sm-9'>
-                    {
+                    {!hotels &&
+                        <img src={loading} alt="loading" className="loading" width={(isMobile) ? '15%' : '3%'}/>
+                    }
+                    {hotels &&
                         hotels.map((hotel, key) => {
                             return <HotelBlock key={key} hotel={hotel} isMobile={isMobile}/>;
                         })
@@ -66,7 +69,7 @@ class Hotels extends Component {
 }
 
 const mapStateToProps = state => {
-    return { hotels: state.hotels }
+    return { hotels: null }
 }
 
 export default connect(mapStateToProps, actions)(Hotels);
