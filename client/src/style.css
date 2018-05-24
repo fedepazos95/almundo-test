@@ -34,39 +34,21 @@
   background-color: white;
   border: solid 1px #efefef;
   margin-bottom: 20px;
+  padding: 15px;
 }
 .hotel-img {
-  padding: 10px;
   width: 100%;
-  height: 270px;
+  height: 230px;
 }
 .hotel-title {
   color: #258ec8;
   font-weight: bold;
   font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  width: 100%;
 }
-.price-box {
-  text-align: center;
-  border-left: dashed 2px #cccccc;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.price-box p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.desc-box {
+  border-right: dashed 2px #cccccc;
 }
 .price {
   color: #df6800;
-  font-size: 20px;
-}
-.price span {
-  font-size: 30px;
   font-weight: bold;
 }

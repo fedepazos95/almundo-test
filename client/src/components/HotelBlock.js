@@ -11,12 +11,10 @@ const HotelBlock = (props) => {
                 <div className="col-lg-3 col-sm-3">
                     <img src={image} className="hotel-img" alt="hotel-img" />
                 </div>
-                <div className="col-sm-6">
-                    <span className="row hotel-title">{props.hotel.name}</span>
-                    <div className="row">
-                        <Icon name="star" size="20" repeat={props.hotel.stars} />
-                    </div>
-                    <div className="row mt-2">
+                <div className="col-lg-6 col-sm-6 desc-box">
+                    <label className="hotel-title">{props.hotel.name}</label>
+                    <div><Icon name="star" size="20" repeat={props.hotel.stars} /></div>
+                    <div>
                         {
                             props.hotel.amenities.map((a, i) => {
                                 return (
@@ -26,14 +24,12 @@ const HotelBlock = (props) => {
                         }
                     </div>
                 </div>
-                <div className="col-sm-3 price-box">
-                    <p>
+                <div className="col-3 align-self-center">
+                    <div className="text-center ml-5 mr-5">
                         <span>Precio por noche por habitación</span>
-                        <label className="price">
-                            <label>ARS</label> <span>{props.hotel.price}</span>
-                        </label>
+                        <h3 className="price">ARS {props.hotel.price}</h3>
                         <button className="btn-lg btn-primary btn-block">Ver hotel</button>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
