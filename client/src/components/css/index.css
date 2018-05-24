@@ -31,6 +31,20 @@
   border: solid 1px #efefef;
   font-weight: bold;
 }
-.icon-filter {
-  width: 15px;
+.hotel-block {
+  background-color: white;
+  border: solid 1px #efefef;
+  margin-bottom: 20px;
+}
+.hotel-img {
+  padding: 10px;
+  width: 320px;
+  height: 270px;
+}
+.hotel-title {
+  color: #258ec8;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
