@@ -18,6 +18,8 @@ class Hotels extends Component {
             width: window.innerWidth
         };
         this.handleFilterChange = this.handleFilterChange.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.submitName = this.submitName.bind(this);
     }
 
     componentWillMount() {
@@ -44,6 +46,15 @@ class Hotels extends Component {
         });
     }
 
+    handleNameChange(e) {
+        this.setState({ name: e.target.value });
+    }
+
+    submitName(e) {
+        this.props.fetchHotels(this.state);
+        e.preventDefault();
+    }
+
     render() {
         const { hotels } = this.props;
         const isMobile = this.state.width <= 500;
@@ -51,16 +62,19 @@ class Hotels extends Component {
         return (
             <div className='row'>
                 <div className='col-lg-3 col-sm-3'>
-                    <FiltersBox state={this.state} handleFilterChange={this.handleFilterChange} />
+                    <FiltersBox state={this.state} handleFilterChange={this.handleFilterChange} handleNameChange={this.handleNameChange} submitName={this.submitName} />
                 </div>
                 <div className='col-lg-9 col-sm-9'>
-                    {hotels.length === 0 &&
+                    {!hotels &&
                         <img src={loading} alt="loading" className="loading" width={(isMobile) ? '15%' : '3%'} />
                     }
-                    {hotels.length > 0 &&
+                    {hotels && hotels.length > 0 &&
                         hotels.map((hotel, key) => {
                             return <HotelBlock key={key} hotel={hotel} isMobile={isMobile} />;
                         })
+                    }
+                    {hotels && hotels.length === 0 &&
+                        <p>No se encontraron resultados</p>
                     }
                 </div>
             </div>

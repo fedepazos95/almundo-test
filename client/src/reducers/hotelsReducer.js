@@ -5,7 +5,7 @@ const hotelsReducer = (state = [], action) => {
         case FETCH_HOTELS:
             return action.payload;
         case CLEAR_HOTELS:
-            return [];
+            return null;
         default:
             return state;
     }
